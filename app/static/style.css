@@ -92,3 +92,13 @@ tr.off td{opacity:.45}
 .sum input{width:64px;padding:2px 4px;text-align:right}
 pre.out{white-space:pre-wrap;word-break:break-word;font-size:13px;background:var(--canvas);border:1px solid var(--line);border-radius:4px;padding:10px;margin:0;font-family:var(--sans)}
 @media (prefers-reduced-motion: reduce){*{transition:none!important}}
+
+/* 가구 배치: 카탈로그 | 도면 | 속성 (이케아 플래너처럼) */
+.planner{display:grid;grid-template-columns:250px minmax(0,1fr) 290px;gap:16px;align-items:start}
+.pl-cat{grid-column:1;grid-row:1;min-width:0}.pl-canvas{grid-column:2;grid-row:1}.pl-side{grid-column:3;grid-row:1}
+.catlist{display:flex;flex-direction:column;gap:6px;max-height:62vh;overflow-y:auto;padding-right:2px}
+.catlist .card{gap:2px;padding:8px 10px}
+@media (max-width:1040px){.planner{grid-template-columns:minmax(0,1fr)}.pl-cat,.pl-canvas,.pl-side{grid-column:1;grid-row:auto}
+  .catlist{flex-direction:row;overflow-x:auto;overflow-y:hidden;max-height:none;padding-bottom:6px}.catlist .card{flex:none;width:170px}}
+a.btn{text-decoration:none;display:inline-block}
+a{color:var(--accent)}

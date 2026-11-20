@@ -6,6 +6,7 @@ Python 표준 라이브러리 HTTP 서버(`app/server.py`) + 의존성 없는 �
 - `app/server.py`: 정적 파일, 비밀번호 로그인, `/api/ask`(사진 분석), `/api/render`(실사 이미지), 하루 사용 한도.
 - `app/ai.py`: Google Gemini API 호출. 모델 이름은 환경 변수(`GEMINI_TEXT_MODEL`, `GEMINI_IMAGE_MODEL`)로 바꾼다.
 - `app/static/app.js`: 화면 전체. 기준 자료(스타일·자재·노임단가·가구 단가)가 파일 위쪽에 있다. AI에 보내는 지시문도 여기서 만든다.
+- 가구 배치(3단계)는 `app.js`의 `CATALOG`(이케아 제품 참고 카탈로그)에서 고른다. 규격·가격은 공식 자료와 대조하지 않은 참고값이라 화면에 그렇게 표시한다. 3D 모양은 `furn3D`.
 - 프로젝트 내용은 브라우저 localStorage, 사진은 브라우저 IndexedDB에 저장된다(서버 저장 없음).
 
 ## 확인
